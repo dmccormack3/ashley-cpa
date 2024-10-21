@@ -1,5 +1,13 @@
 # AshleyCpa
 
+To deploy:
+
+npm run build 
+
+
+ng deploy --repo=https://github.com/dmccormack3/ashley-cpa --base-href=https://dmccormack3.github.io/ashley-cpa/ --name="dmccormack3"
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
 ## Development server

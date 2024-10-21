@@ -16,47 +16,47 @@ export class AppComponent {
       console.log("hey");
   }
   
-  document.addEventListener('DOMContentLoaded', function () {
-      const sections = document.querySelectorAll('section');
+//   document.addEventListener('DOMContentLoaded', function () {
+//       const sections = document.querySelectorAll('section');
   
-      const options = {
-          threshold: 0.1,
-          rootMargin: "0px 0px -50px 0px"
-      };
+//       const options = {
+//           threshold: 0.1,
+//           rootMargin: "0px 0px -50px 0px"
+//       };
   
-      const observer = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(entry => {
-              if (!entry.isIntersecting) {
-                  return;
-              }
-              console.log("showing...");
-              console.log(entry);
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target);
-          });
-      }, options);
+//       const observer = new IntersectionObserver(function(entries, observer) {
+//           entries.forEach(entry => {
+//               if (!entry.isIntersecting) {
+//                   return;
+//               }
+//               console.log("showing...");
+//               console.log(entry);
+//               entry.target.classList.add('show');
+//               observer.unobserve(entry.target);
+//           });
+//       }, options);
   
-      sections.forEach(section => {
-          observer.observe(section);
-      });
+//       sections.forEach(section => {
+//           observer.observe(section);
+//       });
   
-      const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
-      const menu = document.querySelector('.menu');
+//       const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+//       const menu = document.querySelector('.menu');
   
-      mobileMenuIcon!.addEventListener('click', () => {
-          menu!.classList.toggle('active');
-          mobileMenuIcon!.classList.toggle('active');
+//       mobileMenuIcon!.addEventListener('click', () => {
+//           menu!.classList.toggle('active');
+//           mobileMenuIcon!.classList.toggle('active');
   
           
-          // const menuItems = document.querySelectorAll('.menu a');
-          // menuItems.forEach(function(item) {
-          //     item.addEventListener('click', () => {
-          //         menu.classList.toggle('active');
-          //         mobileMenuIcon.classList.toggle('active');
-          //     });
-          // })
-      });
-  });
+//           // const menuItems = document.querySelectorAll('.menu a');
+//           // menuItems.forEach(function(item) {
+//           //     item.addEventListener('click', () => {
+//           //         menu.classList.toggle('active');
+//           //         mobileMenuIcon.classList.toggle('active');
+//           //     });
+//           // })
+//       });
+//   });
   
   }
 }
