@@ -108,7 +108,7 @@ nav ul li {
     position: absolute;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    transition: transform 0.3s ease;
+   transition: transform 0.3s ease;
 }
 
 .polaroid img {
@@ -133,7 +133,7 @@ nav ul li {
 
 /* Stack Effects */
 .stack-1 {
-    transform: rotate(-10deg);
+    transform: rotate(-20deg);
     z-index: 1;
 }
 
@@ -335,7 +335,15 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    height: 100vh;
 }
+
+/* For mobile devices, to prevent issues with fixed backgrounds mobile */
+/* @media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+} */
 
 /* Header styles */
 header {

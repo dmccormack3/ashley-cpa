@@ -3,15 +3,15 @@
         <div class="header-container">
             <h2>Ashley Rabbie CPA</h2>
             <nav>
-                <ul class="menu">
-                    <li><a href="#home" onclick="hello(this)">Home</a></li>
-                    <li><a href="#about"  onclick="hello(this)" >About</a></li>
-                    <li><a href="#services"  onclick="hello(this)">Services</a></li>
-                    <li><a href="#testimonials"  onclick="hello(this)">Testimonials</a></li>
-                    <li><a href="#contact"  onclick="hello(this)">Contact</a></li>
+                <ul class="menu" [ngClass]="{'active': mobileMenuActive}">
+                    <li><a href="#home" (click)="menuItemClicked()">Home</a></li>
+                    <li><a href="#about" (click)="menuItemClicked()" >About</a></li>
+                    <li><a href="#services" (click)="menuItemClicked()">Services</a></li>
+                    <li><a href="#testimonials" (click)="menuItemClicked()">Testimonials</a></li>
+                    <li><a href="#contact" (click)="menuItemClicked()">Contact</a></li>
                 </ul>
               
-                <div class="mobile-menu-icon">
+                <div class="mobile-menu-icon" (click)="mobileMenuClicked()" [ngClass]="{'active': mobileMenuActive}">
                     <span>&#9776;</span>
                 </div>
             </nav>

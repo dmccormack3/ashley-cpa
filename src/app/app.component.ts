@@ -1,21 +1,32 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'ashley-cpa';
 
+  mobileMenuActive= false;
+
   ngOnInit() {
-    function hello(element: any) {
-      console.log("hey");
   }
-  
+
+  mobileMenuClicked() {
+    this.mobileMenuActive = !this.mobileMenuActive;
+  }
+
+  public menuItemClicked() {
+    this.mobileMenuActive = false;
+  }
+}
+
+
 //   document.addEventListener('DOMContentLoaded', function () {
 //       const sections = document.querySelectorAll('section');
   
@@ -57,8 +68,5 @@ export class AppComponent {
 //           // })
 //       });
 //   });
-  
-  }
-}
 
 
