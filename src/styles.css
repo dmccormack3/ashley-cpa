@@ -339,11 +339,11 @@ body {
 }
 
 /* For mobile devices, to prevent issues with fixed backgrounds mobile */
-/* @media (max-width: 768px) {
+ @media (max-width: 768px) {
     body {
         background-attachment: scroll;
     }
-} */
+} 
 
 /* Header styles */
 header {
