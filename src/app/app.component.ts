@@ -14,6 +14,8 @@ export class AppComponent {
 
   mobileMenuActive= false;
 
+  activePolaroid = "stack-3";
+
   ngOnInit() {
   }
 
@@ -23,6 +25,19 @@ export class AppComponent {
 
   public menuItemClicked() {
     this.mobileMenuActive = false;
+  }
+
+  public changePolaroid() {
+    console.log("click");
+    if (this.activePolaroid == "stack-1") {
+      this.activePolaroid = "stack-2"
+    }
+    else if (this.activePolaroid == "stack-2") {
+      this.activePolaroid = "stack-3";
+    }
+    else {
+      this.activePolaroid = "stack-1"
+    }
   }
 }
 

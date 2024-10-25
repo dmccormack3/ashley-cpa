@@ -1,4 +1,5 @@
 
+    <div id="background"></div>
     <header>
         <div class="header-container">
             <h2>Ashley Rabbie CPA</h2>
@@ -19,24 +20,24 @@
     </header>
 
     <section id="home" class="show">
-        <div class="container">
+        <div class="container" (click)="changePolaroid()">
             <div class="polaroid-container">
-                <div class="polaroid stack-1">
+                <div class="polaroid stack-1" [ngClass]="{'show-polaroid': activePolaroid === 'stack-1'}">
                     <img src="assets/ashleycat.png" alt="Polaroid Image 1">
                     <div class="caption">
-                        <p>Ashley Rabbie CPA</p>
+                        <p>Something else...</p>
                     </div>
                 </div>
-                <div class="polaroid stack-2">
+                <div class="polaroid stack-2" [ngClass]="{'show-polaroid': activePolaroid === 'stack-2'}" >
                     <img src="assets/ashleycat.png" alt="Polaroid Image 2">
                     <div class="caption">
                         <p>& Cat Mom</p>
                     </div>
                 </div>
-                <div class="polaroid stack-3">
+                <div class="polaroid stack-3" [ngClass]="{'show-polaroid': activePolaroid === 'stack-3'}">
                     <img src="assets/ashley.png" alt="Polaroid Image 3">
                     <div class="caption">
-                        <p>Ashley Rabie CPA</p>
+                        <p>Ashley Rabbie CPA</p>
                     </div>
                 </div>
             </div>
