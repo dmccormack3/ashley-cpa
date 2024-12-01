@@ -24,7 +24,10 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    window.scrollTo(190,document.body.scrollHeight);
+    setTimeout(() => {
+      window.scrollTo(0,50);
+    }, 250)
+
   }
 
   /* todo: this needs improved */
