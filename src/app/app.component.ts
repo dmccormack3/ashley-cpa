@@ -24,16 +24,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-  //   document.addEventListener("DOMContentLoaded", function () {
-  //     const serviceGroups = document.querySelectorAll(".service-group");
-  
-  //     serviceGroups.forEach(group => {
-  //         const header = group.querySelector(".service-header");
-  //         header!.addEventListener("click", () => {
-  //             group.classList.toggle("open");
-  //         });
-  //     });
-  // });
+    window.scrollTo(190,document.body.scrollHeight);
   }
 
   /* todo: this needs improved */

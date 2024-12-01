@@ -346,6 +346,10 @@ footer {
     border: 3px solid #18bc9c;
 }
 
+#home .container {
+    margin-bottom:100px;
+}
+
 /* Reset some basic styles */
 * {
     margin: 0;
