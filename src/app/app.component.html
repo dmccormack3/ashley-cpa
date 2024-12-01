@@ -65,28 +65,76 @@
             <h2>My Services</h2>
             <div class="service-columns">
                 <div class="left-column">
-                    <ul class="service-list">
-                        <li>
+                    <div class="service-group" (click)="toggleServices('finPlanning')" [ngClass]="{'show' : services['finPlanning']}">
+                        <div class="service-heading">
                             <div class="bullet">&#10003;</div>
-                            <p>Financial Planning Assistance.</p>
-                        </li>
-                        <li>
+                            <p>Financial Planning Assistance</p>
+                            <span class="icon">+</span>
+                        </div>
+                        <ul class="service-sublist">
+                            <li><b>Individual Income Tax Filing:</b> Preparing and filing federal, state, and local tax returns for individuals.</li>
+                            <li><b>Tax Planning:</b> Offering guidance on strategies to reduce tax liability throughout the year, such as deductions and credits.</li>
+                            <li><b>Amended Returns:</b> Assisting clients in correcting previously filed tax returns if errors were made.</li>
+                            <li><b>E-filing:</b> Submitting tax returns electronically to speed up the process and ensure accuracy.</li>
+                            <li><b>Tax Resolution Services: </b> Helping clients address issues with the IRS, including back taxes, penalties, and payment plans.</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="service-group" (click)="toggleServices('businessTaxPrep')" [ngClass]="{'show' : services['businessTaxPrep']}">
+                        <div class="service-heading">
                             <div class="bullet">&#10003;</div>
-                            <p>End of year tax returns.</p>
-                        </li>
-                    </ul>
+                            <p>Business Tax Preparation</p>
+                            <span class="icon">+</span>
+                        </div>
+                        <ul class="service-sublist">
+                            <li>
+                                <strong>Small Business Tax Returns:</strong> Preparing tax returns for sole proprietors, partnerships, LLCs, and S-corporations.
+                            </li>
+                            <li>
+                                <strong>Business Tax Planning:</strong> Assisting business owners in planning for tax savings, deductions, and credits relevant to their business type.
+                            </li>
+                            <li>
+                                <strong>Quarterly Estimated Taxes:</strong> Helping business owners calculate and file estimated tax payments to avoid penalties.
+                            </li>
+                            <li>
+                                <strong>Sales Tax Filing:</strong> Preparing and filing sales tax returns for businesses that collect sales tax.
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    
                 </div>
                 <div class="right-column">
-                    <ul class="service-list">
-                        <li>
+                    <div class="service-group" (click)="toggleServices('taxAdvice')" [ngClass]="{'show' : services['taxAdvice']}">
+                        <div class="service-heading">
                             <div class="bullet">&#10003;</div>
-                            <p>Look after your cat.</p>
-                        </li>
-                        <li>
+                            <p>Tax Advice and Consultation</p>
+                            <span class="icon">+</span>
+                        </div>
+                        <ul class="service-sublist">
+                            <li>
+                                <strong>Tax Consultation:</strong> Providing advice on specific tax-related questions or situations, such as how to handle investments, inheritances, or complex deductions.
+                            </li>
+                            <li>
+                                <strong>Audit Representation:</strong> Representing clients during an audit with the IRS, including communication and documentation support.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-group" (click)="toggleServices('specTax')" [ngClass]="{'show' : services['specTax']}">
+                        <div class="service-heading">
                             <div class="bullet">&#10003;</div>
-                            <p>And then some more stuff about taxes and shit</p>
-                        </li>
-                    </ul>
+                            <p>Specialized Tax Services</p>
+                            <span class="icon">+</span>
+                        </div>
+                        <ul class="service-sublist">
+                            <li>
+                                <strong>Tax Filing for Non-Residents:</strong> Assisting non-resident aliens with tax returns for U.S.-source income (Form 1040NR).
+                            </li>
+                            <li>
+                                <strong>Self-Employed & Freelancers:</strong> Offering specialized tax preparation for self-employed individuals, including deductions for business expenses, home office, and vehicle use.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,16 +144,16 @@
         <div class="container">
             <h2>What My Clients Say</h2>
             <blockquote>
-                <p>"Before meeting Ashley I had no idea what the difference between an W4 and 1040. Now I'm a pro. She also gives good treats."</p>
-                <footer>— Frodo</footer>
+                <p>"Ashley has been so helpful to me for this tax season! The whole process from giving her my documents to getting a detailed summary of my return was less than 24 hours. She’s been so responsive and willing to explain every single step she took to calculate my taxes owed. I cannot recommend her enough!"</p>
+                <footer>— Sarah W</footer>
             </blockquote>
             <blockquote>
-                <p>"Ashley helped me offshore thounds of dollars from my Cat Nip business. 10/10 belly rubs too."</p>
-                <footer>— Nitro</footer>
+                <p>"Where to begin! I could literally write a novel about how brilliant Ashley is when it comes to taxes. She is the first CPA I’ve ever worked with that actually took the time to help me understand my taxes, answer all my questions, help me prep for next year AND do it all within less than a weeks time. Hands down would recommend her to any and everyone!"</p>
+                <footer>— Rachel B</footer>
             </blockquote>
             <blockquote>
-                <p>"A mysterious man also lives here. He is also nice."</p>
-                <footer>— Gandalf</footer>
+                <p>"Ashley was amazing to work with. She was communicative, efficient and truly cares about her clients. I fully trust her and would recommend her to anyone looking for someone to do their taxes."</p>
+                <footer>— Katie R</footer>
             </blockquote>
         </div>
     </section>

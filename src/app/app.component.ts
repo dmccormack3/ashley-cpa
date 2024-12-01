@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -16,7 +16,29 @@ export class AppComponent {
 
   activePolaroid = "stack-3";
 
+  services: any = {
+    finPlanning: false,
+    businessTaxPrep: false,
+    taxAdvice: false,
+    specTax: false
+  }
+
   ngOnInit() {
+  //   document.addEventListener("DOMContentLoaded", function () {
+  //     const serviceGroups = document.querySelectorAll(".service-group");
+  
+  //     serviceGroups.forEach(group => {
+  //         const header = group.querySelector(".service-header");
+  //         header!.addEventListener("click", () => {
+  //             group.classList.toggle("open");
+  //         });
+  //     });
+  // });
+  }
+
+  /* todo: this needs improved */
+  toggleServices(name: string) {
+    this.services[name] = !this.services[name];
   }
 
   mobileMenuClicked() {
@@ -28,7 +50,6 @@ export class AppComponent {
   }
 
   public changePolaroid() {
-    console.log("click");
     if (this.activePolaroid == "stack-1") {
       this.activePolaroid = "stack-2"
     }
@@ -37,6 +58,20 @@ export class AppComponent {
     }
     else {
       this.activePolaroid = "stack-1"
+    }
+  }
+
+  
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event: any) {
+    const numb = window.scrollY;
+    console.log(numb);
+    if (numb >= 1) {
+      console.log("scrolled 1");
+    }
+    else {
+      console.log("hello");
+      /* https://stackoverflow.com/questions/49215634/angular-check-when-an-element-is-in-view */
     }
   }
 }
