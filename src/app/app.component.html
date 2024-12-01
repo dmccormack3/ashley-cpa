@@ -167,10 +167,9 @@
         <div class="container">
             <h2>Contact Me</h2>
             <form>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <input type="subject" name="subject"  [(ngModel)]="emailSubject" placeholder="Your Subject" required>
+                <textarea name="message"  [(ngModel)]="emailMessage" placeholder="Your Message" required></textarea>
+                <button (click)="sendMessage()" type="submit">Send Message</button>
             </form>
         </div>
     </section>

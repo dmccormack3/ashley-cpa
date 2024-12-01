@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,6 +16,9 @@ export class AppComponent {
   mobileMenuActive= false;
 
   activePolaroid = "stack-3";
+
+  emailSubject: string = '';
+  emailMessage: string = '';
 
   services: any = {
     finPlanning: false,
@@ -55,19 +59,23 @@ export class AppComponent {
     }
   }
 
-  
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll($event: any) {
-    const numb = window.scrollY;
-    console.log(numb);
-    if (numb >= 1) {
-      console.log("scrolled 1");
-    }
-    else {
-      console.log("hello");
-      /* https://stackoverflow.com/questions/49215634/angular-check-when-an-element-is-in-view */
-    }
+  public sendMessage () {
+    window.location.href = `mailto:danielmccormack92@gmail.com?subject=${this.emailSubject}&body=${this.emailMessage}`;
   }
+
+  
+  // @HostListener('window:scroll', ['$event'])
+  // onWindowScroll($event: any) {
+  //   const numb = window.scrollY;
+  //   console.log(numb);
+  //   if (numb >= 1) {
+  //     console.log("scrolled 1");
+  //   }
+  //   else {
+  //     console.log("hello");
+  //     /* https://stackoverflow.com/questions/49215634/angular-check-when-an-element-is-in-view */
+  //   }
+  // }
 }
 
 
