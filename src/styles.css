@@ -171,7 +171,7 @@ nav ul li a:hover {
 /* Hero Section */
 #home {
     color: white;
-    padding-top: 40px;
+    padding-top: 0px; /* was 40 */
     text-align: center;
 }
 
@@ -183,11 +183,6 @@ nav ul li a:hover {
 
 #home p {
     font-size: 1.25rem;
-}
-
-/* Section styles */
-section {
-    padding: 60px 0;
 }
 
 .service-columns {
@@ -272,15 +267,6 @@ section {
         gap: 0px;
     }
 }
-
-#about, #services, #testimonials, #contact {
-    background-color: white;
-    margin-top: 20px;
-    padding: 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
 
 #services ul li {
     margin: 15px 0;
@@ -454,6 +440,16 @@ section.show {
     padding: 60px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+.container h2 {
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    #about, #services, #testimonials, #contact {
+        padding: 25px;
+    }
 }
 
 /* Profile image */
