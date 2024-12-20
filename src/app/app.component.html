@@ -163,14 +163,13 @@
         </div>
     </section>
 
-    <section id="contact" class="show">
-        <div class="container">
+    <section id="contact" class="contact-section show">
+        <div class="profile-photo">
+            <img src="assets/headshot.png" alt="Profile Photo">
+        </div>
+        <div class="contact-info">
             <h2>Contact Me</h2>
-            <form>
-                <input type="subject" name="subject"  [(ngModel)]="emailSubject" placeholder="Your Subject" required>
-                <textarea name="message"  [(ngModel)]="emailMessage" placeholder="Your Message" required></textarea>
-                <button (click)="sendMessage()" type="submit">Send Message</button>
-            </form>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
         </div>
     </section>
 
