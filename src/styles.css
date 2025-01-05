@@ -133,7 +133,7 @@ nav ul li {
 
 /* Stack Effects */
 .stack-1 {
-    transform: rotate(-20deg);
+    transform: rotate(-5deg);
     z-index: 1;
 }
 
