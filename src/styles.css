@@ -547,6 +547,11 @@ ul.service-sublist {
     flex-wrap: wrap; /* Ensure responsiveness */
 }
 
+.download-items h3{
+    color: #2c3e50;
+}
+
+
 .download-item {
     position: relative;
     flex: 1 1 calc(45% - 20px); /* Take up 45% width with spacing */
