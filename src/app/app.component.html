@@ -9,6 +9,7 @@
                     <li><a href="#about" (click)="menuItemClicked()" >About</a></li>
                     <li><a href="#services" (click)="menuItemClicked()">Services</a></li>
                     <li><a href="#testimonials" (click)="menuItemClicked()">Testimonials</a></li>
+                    <li><a href="#downloads" (click)="menuItemClicked()">Downloads</a></li>
                     <li><a href="#contact" (click)="menuItemClicked()">Contact</a></li>
                 </ul>
               
@@ -163,20 +164,27 @@
         </div>
     </section>
 
-    <section id="downloads" class="show">
-        <div class="container">
+    <section class="download-section show" id="downloads">
+        <div class="container"> 
             <h2>Downloads</h2>
-            <ul class="download-list">
-                <li class="download-item service-heading">
-                    <p>Tax Engagement Letter</p>
-                    <a href="tax-engagement-letter.pdf" download>Download</a>
-                </li>
-                <li class="download-item service-heading">
-                    <p>Tax Checklist</p>
-                    <a href="tax-checklist.pdf" download>Download</a>
-                </li>
-            </ul>
-        </div>
+            <div class="download-items">
+                <!-- Document 1 -->
+                <div class="download-item service-heading" onclick="window.location.href='assets/documents/EngagementLetter2024.pdf'">
+                    <h3>Tax Engagement Letter</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 16.5l-5.5-5.5h4V2h3v9h4l-5.5 5.5zM3 20v2h18v-2H3z" />
+                    </svg>
+                </div>
+
+                <!-- Document 2 -->
+                <div class="download-item service-heading" onclick="window.location.href='assets/documents/TaxChecklist2024.docx'">
+                    <h3>Tax Checklist</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 16.5l-5.5-5.5h4V2h3v9h4l-5.5 5.5zM3 20v2h18v-2H3z" />
+                    </svg>
+                </div>
+            </div>
+     </div>
     </section>
 
     <section id="contact" class="contact-section show">
