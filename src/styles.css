@@ -547,8 +547,14 @@ ul.service-sublist {
     flex-wrap: wrap; /* Ensure responsiveness */
 }
 
+.download-section h2 {
+    padding-bottom: 0;
+}
+
 .download-items h3{
     color: #2c3e50;
+    padding-left: 15px;
+    font-style: italic;
 }
 
 
@@ -593,10 +599,15 @@ ul.service-sublist {
     }
 
     .download-item h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
+        padding-left: 0;
     }
 
     .download-items {
-        gap: 0px;
+        gap: 5px;
+    }
+
+    .download-section .container {
+        width: 100%;
     }
 }
